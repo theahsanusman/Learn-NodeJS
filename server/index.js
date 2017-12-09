@@ -1,6 +1,7 @@
 import express from "express";
 const app = express();
 import Routes from "./routes/index";
+import "./database";
 
 // Setup Routes
 app.use(Routes);
