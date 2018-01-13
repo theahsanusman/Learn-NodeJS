@@ -22,4 +22,21 @@ Router.get("/allTodos", (req, res) => {
     });
 });
 
+Router.put("/todo/:id", (req, res) => {
+    const todoId = { _id: req.params.id };
+    const updatedTodo = { txt: req.body.txt };
+    Todo.update(todoId, updatedTodo, (errors) => {
+        if (errors) return res.json({ status: flase, errors: errors });
+        else res.json({ status: true });
+    });
+});
+
+Router.delete("/removeTodo/:id", (req, res) => {
+    const todoId = { _id: req.params.id };
+    Todo.remove(todoId, (errors) => {
+        if (errors) return res.json({ status: false, errors });
+        else res.json({ status: true });
+    });
+});
+
 module.exports = Router;
