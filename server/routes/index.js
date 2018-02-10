@@ -2,13 +2,17 @@ import express from "express";
 import Todo from "../models/todos";
 const Router = express.Router();
 
+Router.get("/", (req, res) => {
+    res.send("HEllO TO YOU ON THIS TODO API!");
+});
+
 Router.post("/todo", (req, res) => {
     const newTodo = new Todo({ txt: req.body.txt });
     newTodo.save((err) => {
         if (err) { res.json({ err: err }); }
         else {
             res.json({ status: true });
-        }
+        }   
     });
 });
 
