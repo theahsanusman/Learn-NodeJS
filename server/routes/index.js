@@ -7,12 +7,13 @@ Router.get("/", (req, res) => {
 });
 
 Router.post("/todo", (req, res) => {
+    console.log("post", req.body);
     const newTodo = new Todo({ txt: req.body.txt });
     newTodo.save((err) => {
         if (err) { res.json({ err: err }); }
         else {
             res.json({ status: true });
-        }   
+        }
     });
 });
 

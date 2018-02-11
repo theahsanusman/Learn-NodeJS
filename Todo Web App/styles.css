@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #2FBA9B;
+    height: 75px;
+    width: 100%;
+}
+
+#todoField {
+    width: 99%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 15px;
+    color: #fff;
+    background-color: #51C7AE;
+    border: 0px;
+    outline: none;
+}
+
+#submitBTN {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0px;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    right: 2%;
+}
+
+.fa-plus {
+    color: #2FBA9B;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+:-moz-placeholder {
+    color: #fff;
+}
+
+.each_todo_td {
+    padding-top: 10px;
+}
+
+.fas {
+    transition: all 0.40s ease;
+    color: darkgray;
+    cursor: pointer;
+}
+
+.fas:hover {
+    color: #2FBA9B;
+}
+
+.editTodo {
+    border: 0px;
+}
